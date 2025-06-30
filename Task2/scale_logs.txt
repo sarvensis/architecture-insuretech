@@ -1,0 +1,49 @@
+kubectl --context orbstack get po -o wide
+NAME                      READY   STATUS    RESTARTS   AGE     IP               NODE       NOMINATED NODE   READINESS GATES
+my-app-58b8984fb6-8qg6k   1/1     Running   0          2m33s   192.168.194.96   orbstack   <none>           <none>
+my-app-58b8984fb6-9sftz   1/1     Running   0          11h     192.168.194.84   orbstack   <none>           <none>
+my-app-58b8984fb6-v6crm   1/1     Running   0          7m49s   192.168.194.95   orbstack   <none>           <none>
+my-app-58b8984fb6-vbpq6   1/1     Running   0          11m     192.168.194.94   orbstack   <none>           <none>
+
+
+kubectl --context orbstack get po -o wide
+NAME                      READY   STATUS    RESTARTS   AGE     IP               NODE       NOMINATED NODE   READINESS GATES
+my-app-58b8984fb6-8qg6k   1/1     Running   0          4m35s   192.168.194.96   orbstack   <none>           <none>
+my-app-58b8984fb6-9sftz   1/1     Running   0          11h     192.168.194.84   orbstack   <none>           <none>
+my-app-58b8984fb6-c986s   1/1     Running   0          80s     192.168.194.97   orbstack   <none>           <none>
+my-app-58b8984fb6-v6crm   1/1     Running   0          9m51s   192.168.194.95   orbstack   <none>           <none>
+my-app-58b8984fb6-vbpq6   1/1     Running   0          13m     192.168.194.94   orbstack   <none>           <none>
+
+
+kubectl --context orbstack get po -o wide
+NAME                      READY   STATUS    RESTARTS   AGE     IP               NODE       NOMINATED NODE   READINESS GATES
+my-app-58b8984fb6-8qg6k   1/1     Running   0          5m13s   192.168.194.96   orbstack   <none>           <none>
+my-app-58b8984fb6-9sftz   1/1     Running   0          11h     192.168.194.84   orbstack   <none>           <none>
+my-app-58b8984fb6-c986s   1/1     Running   0          118s    192.168.194.97   orbstack   <none>           <none>
+my-app-58b8984fb6-drvmv   1/1     Running   0          28s     192.168.194.98   orbstack   <none>           <none>
+my-app-58b8984fb6-v6crm   1/1     Running   0          10m     192.168.194.95   orbstack   <none>           <none>
+my-app-58b8984fb6-vbpq6   1/1     Running   0          14m     192.168.194.94   orbstack   <none>           <none>
+
+
+kubectl --context orbstack get po -o wide
+NAME                      READY   STATUS    RESTARTS   AGE     IP               NODE       NOMINATED NODE   READINESS GATES
+my-app-58b8984fb6-6fkbc   1/1     Running   0          57s     192.168.194.99   orbstack   <none>           <none>
+my-app-58b8984fb6-8qg6k   1/1     Running   0          6m58s   192.168.194.96   orbstack   <none>           <none>
+my-app-58b8984fb6-9sftz   1/1     Running   0          11h     192.168.194.84   orbstack   <none>           <none>
+my-app-58b8984fb6-c986s   1/1     Running   0          3m43s   192.168.194.97   orbstack   <none>           <none>
+my-app-58b8984fb6-drvmv   1/1     Running   0          2m13s   192.168.194.98   orbstack   <none>           <none>
+my-app-58b8984fb6-v6crm   1/1     Running   0          12m     192.168.194.95   orbstack   <none>           <none>
+my-app-58b8984fb6-vbpq6   1/1     Running   0          16m     192.168.194.94   orbstack   <none>           <none>
+
+
+kubectl --context orbstack get po -o wide
+NAME                      READY   STATUS    RESTARTS   AGE     IP                NODE       NOMINATED NODE   READINESS GATES
+my-app-58b8984fb6-6fkbc   1/1     Running   0          2m15s   192.168.194.99    orbstack   <none>           <none>
+my-app-58b8984fb6-8qg6k   1/1     Running   0          8m16s   192.168.194.96    orbstack   <none>           <none>
+my-app-58b8984fb6-9sftz   1/1     Running   0          11h     192.168.194.84    orbstack   <none>           <none>
+my-app-58b8984fb6-c986s   1/1     Running   0          5m1s    192.168.194.97    orbstack   <none>           <none>
+my-app-58b8984fb6-drvmv   1/1     Running   0          3m31s   192.168.194.98    orbstack   <none>           <none>
+my-app-58b8984fb6-t6psk   1/1     Running   0          30s     192.168.194.101   orbstack   <none>           <none>
+my-app-58b8984fb6-v6crm   1/1     Running   0          13m     192.168.194.95    orbstack   <none>           <none>
+my-app-58b8984fb6-vbpq6   1/1     Running   0          17m     192.168.194.94    orbstack   <none>           <none>
+my-app-58b8984fb6-z4m6p   1/1     Running   0          75s     192.168.194.100   orbstack   <none>           <none>
