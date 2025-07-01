@@ -8,7 +8,7 @@ data:
     events { worker_connections 1024; }
 
     http {
-      limit_req_zone $binary_remote_addr zone=partner_zone:10m rate=10000r/m;
+      limit_req_zone $binary_remote_addr zone=partner_zone:10m rate=10r/m;
 
       upstream my_app {
         server my-app-service.default.svc.cluster.local:80;

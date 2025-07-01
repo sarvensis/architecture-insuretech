@@ -12,6 +12,7 @@ spec:
       labels:
         app: my-app
     spec:
+      terminationGracePeriodSeconds: 30 # время на graceful shutdown
       containers:
         - name: my-app
           image: shestera/scaletestapp
@@ -20,3 +21,14 @@ spec:
               memory: "15Mi"
             limits:
               memory: "30Mi"
+          readinessProbe:
+            httpGet:
+              path: /healthz # поменяй, если в приложении другой путь для проверки готовности
+              port: 8080 # замени на порт приложения, если не 8080
+            initialDelaySeconds: 1
+            periodSeconds: 2
+            failureThreshold: 1
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 5"] # пауза для снятия пода с нагрузки

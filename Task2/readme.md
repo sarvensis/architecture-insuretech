@@ -66,3 +66,10 @@ helm -n orbstack install prometheus-adapter prometheus-community/prometheus-adap
 # prometheus
 kubectl port-forward svc/prometheus-kube-prometheus-prometheus -n monitoring 9090:9090
 ```
+
+8. hpa Добавляем кастомные метрики
+```
+helm upgrade --install prometheus-adapter prometheus-community/prometheus-adapter \
+  -n monitoring \
+  -f metrics-values.yaml
+```
