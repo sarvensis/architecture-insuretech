@@ -23,8 +23,8 @@ spec:
               memory: "30Mi"
           readinessProbe:
             httpGet:
-              path: /healthz # поменяй, если в приложении другой путь для проверки готовности
-              port: 8080 # замени на порт приложения, если не 8080
+              path: /
+              port: 8080
             initialDelaySeconds: 1
             periodSeconds: 2
             failureThreshold: 1
