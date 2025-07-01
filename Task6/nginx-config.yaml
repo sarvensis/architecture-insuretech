@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  nginx.conf: |
+    worker_processes  1;
+    events { worker_connections 1024; }
+
+    http {
+      limit_req_zone $binary_remote_addr zone=partner_zone:10m rate=10r/m;
+
+      upstream my_app {
+        server my-app-service.default.svc.cluster.local:80;
+      }
+
+      server {
+        listen 80;
+
+        location / {
+          limit_req zone=partner_zone burst=15;
+          limit_req_status 429;
+          proxy_pass http://my_app;
+        }
+      }
+    }

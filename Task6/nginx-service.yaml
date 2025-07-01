@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-gateway
+spec:
+  selector:
+    app: nginx-gateway
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  # type: LoadBalancer
+  type: NodePort
+#
+# for i in {1..20}; do curl -i http://localhost:32028/; sleep 1; done
+# HTTP/1.1 200 OK
+# Server: nginx/1.29.0
+# Date: Mon, 30 Jun 2025 09:47:36 GMT
+# Content-Type: text/plain; charset=utf-8
+# Content-Length: 61
+# Connection: keep-alive
+
+# Идентификатор пода: my-app-58b8984fb6-fw6g6
+# curl: (6) Could not resolve host: sleep
+# curl: (7) Failed to connect to 0.0.0.1 port 80 after 0 ms: Couldn't connect to server
+# HTTP/1.1 200 OK
+# Server: nginx/1.29.0
+# Date: Mon, 30 Jun 2025 09:47:48 GMT
+# Content-Type: text/plain; charset=utf-8
+# Content-Length: 61
+# Connection: keep-alive
+
+# Идентификатор пода: my-app-58b8984fb6-8tsr5
+# curl: (6) Could not resolve host: sleep
+# curl: (7) Failed to connect to 0.0.0.1 port 80 after 0 ms: Couldn't connect to server
+# HTTP/1.1 429 Too Many Requests
+# Server: nginx/1.29.0
+# Date: Mon, 30 Jun 2025 09:47:48 GMT
+# Content-Type: text/html
+# Content-Length: 169
+# Connection: keep-alive
